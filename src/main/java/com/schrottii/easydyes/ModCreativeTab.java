@@ -14,5 +14,5 @@ public class ModCreativeTab extends CreativeModeTab {
         return new ItemStack(ModItems.NORMALITEM.get());
     }
 
-    public static final ModCreativeTab easydyes = new ModCreativeTab(CreativeModeTab.TABS.length, "easydyes");
+    public static final ModCreativeTab EASYDYES = new ModCreativeTab(CreativeModeTab.TABS.length, "Easy Dyes");
 }

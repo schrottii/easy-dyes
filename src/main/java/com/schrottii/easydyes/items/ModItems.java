@@ -1,6 +1,6 @@
 package com.schrottii.easydyes.items;
 
-import com.schrottii.easydyes.easydyes;
+import com.schrottii.easydyes.EasyDyes;
 import com.schrottii.easydyes.ModCreativeTab;
 import net.minecraft.world.item.*;
 import net.minecraftforge.event.RegistryEvent;
@@ -11,12 +11,12 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-@Mod.EventBusSubscriber(modid = easydyes.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = EasyDyes.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModItems {
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, easydyes.MODID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, EasyDyes.MODID);
 
     public static final RegistryObject<Item> NORMALITEM = ITEMS.register("normalitem",
-            () -> new Item(new Item.Properties().tab(ModCreativeTab.easydyes)));
+            () -> new Item(new Item.Properties().tab(ModCreativeTab.EASYDYES)));
 
     @SubscribeEvent
     public static void onRegisterItems(RegistryEvent.Register<Item> event) {

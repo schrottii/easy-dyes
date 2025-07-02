@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "easydyes:block/normalblock"
+    "all": "easydyes:block/dye_station"
   }
 }

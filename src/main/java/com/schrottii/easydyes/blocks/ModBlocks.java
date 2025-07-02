@@ -1,10 +1,12 @@
 package com.schrottii.easydyes.blocks;
 
-import com.schrottii.easydyes.easydyes;
+import com.schrottii.easydyes.EasyDyes;
 import com.schrottii.easydyes.ModCreativeTab;
+import com.schrottii.easydyes.blocks.custom.DyeStationBlock;
 import com.schrottii.easydyes.items.ModItems;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.material.Material;
@@ -15,23 +17,24 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import com.schrottii.easydyes.ModCreativeTab;
 
 import java.util.function.Supplier;
 import java.util.function.ToIntFunction;
 
-@Mod.EventBusSubscriber(modid = easydyes.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = EasyDyes.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModBlocks {
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, easydyes.MODID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, EasyDyes.MODID);
 
 
-    public static final RegistryObject<Block> NORMALBLOCK = registerBlock("normalblock",
-            () -> new Block(Block.Properties.of(Material.STONE).strength(2f, 1200f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> DYE_STATION = registerBlock("dye_station",
+            () -> new DyeStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn, ModCreativeTab.easydyes);
+        registerBlockItem(name, toReturn, ModCreativeTab.EASYDYES);
         return toReturn;
     }
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
