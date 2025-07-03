@@ -1,5 +1,6 @@
 package com.schrottii.easydyes.blocks.entity.custom;
 
+import com.schrottii.easydyes.recipe.DyeStationRecipe;
 import com.schrottii.easydyes.screen.DyeStationMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -29,6 +30,7 @@ import org.jetbrains.annotations.Nullable;
 import com.schrottii.easydyes.blocks.entity.ModBlockEntities;
 
 import javax.annotation.Nonnull;
+import java.util.Optional;
 import java.util.Random;
 
 public class DyeStationBlockEntity extends BlockEntity implements MenuProvider {
@@ -40,6 +42,9 @@ public class DyeStationBlockEntity extends BlockEntity implements MenuProvider {
     };
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
+
+    private int progress = 0;
+    private int maxProgress = 72;
 
     public DyeStationBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(ModBlockEntities.DYE_STATION_BLOCK_ENTITY.get(), pWorldPosition, pBlockState);
@@ -81,6 +86,7 @@ public class DyeStationBlockEntity extends BlockEntity implements MenuProvider {
     @Override
     protected void saveAdditional(@NotNull CompoundTag tag) {
         tag.put("inventory", itemHandler.serializeNBT());
+        tag.putInt("dye_station.progress", progress);
         super.saveAdditional(tag);
     }
 
@@ -88,6 +94,7 @@ public class DyeStationBlockEntity extends BlockEntity implements MenuProvider {
     public void load(CompoundTag nbt) {
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
+        progress = nbt.getInt("dye_station.progress");
     }
 
     public void drops() {
@@ -101,27 +108,61 @@ public class DyeStationBlockEntity extends BlockEntity implements MenuProvider {
 
 
     public static void tick(Level pLevel, BlockPos pPos, BlockState pState, DyeStationBlockEntity pBlockEntity) {
-        if(hasRecipe(pBlockEntity) && hasNotReachedStackLimit(pBlockEntity)) {
-            craftItem(pBlockEntity);
+        if(hasRecipe(pBlockEntity)) {
+            pBlockEntity.progress++;
+            setChanged(pLevel, pPos, pState);
+            if(pBlockEntity.progress > pBlockEntity.maxProgress) {
+                craftItem(pBlockEntity);
+            }
+        } else {
+            pBlockEntity.resetProgress();
+            setChanged(pLevel, pPos, pState);
         }
     }
 
-    private static void craftItem(DyeStationBlockEntity entity) {
-        entity.itemHandler.extractItem(0, 1, false);
-        entity.itemHandler.extractItem(1, 1, false);
-
-        entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RED_DYE,
-                entity.itemHandler.getStackInSlot(2).getCount() + 1));
-    }
-
     private static boolean hasRecipe(DyeStationBlockEntity entity) {
-        boolean hasItemInFirstSlot = entity.itemHandler.getStackInSlot(0).getItem() == Items.BLACK_DYE;
-        boolean hasItemInSecondSlot = entity.itemHandler.getStackInSlot(1).getItem() == Items.WHITE_DYE;
+        Level level = entity.level;
+        SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
+        for (int i = 0; i < entity.itemHandler.getSlots(); i++) {
+            inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
+        }
 
-        return hasItemInFirstSlot && hasItemInSecondSlot;
+        Optional<DyeStationRecipe> match = level.getRecipeManager()
+                .getRecipeFor(DyeStationRecipe.Type.INSTANCE, inventory, level);
+
+        return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
+                && canInsertItemIntoOutputSlot(inventory, match.get().getResultItem());
     }
 
-    private static boolean hasNotReachedStackLimit(DyeStationBlockEntity entity) {
-        return entity.itemHandler.getStackInSlot(2).getCount() < entity.itemHandler.getStackInSlot(2).getMaxStackSize();
+    private static void craftItem(DyeStationBlockEntity entity) {
+        Level level = entity.level;
+        SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
+        for (int i = 0; i < entity.itemHandler.getSlots(); i++) {
+            inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
+        }
+
+        Optional<DyeStationRecipe> match = level.getRecipeManager()
+                .getRecipeFor(DyeStationRecipe.Type.INSTANCE, inventory, level);
+
+        if(match.isPresent()) {
+            entity.itemHandler.extractItem(0,1, false);
+            entity.itemHandler.extractItem(1,1, false);
+            entity.itemHandler.setStackInSlot(2, new ItemStack(match.get().getResultItem().getItem(),
+                    entity.itemHandler.getStackInSlot(2).getCount() + 1));
+
+            entity.resetProgress();
+        }
+    }
+
+    private void resetProgress() {
+        this.progress = 0;
+    }
+
+    private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack output) {
+        return inventory.getItem(2).getItem() == output.getItem() || inventory.getItem(2).isEmpty();
+    }
+
+    private static boolean canInsertAmountIntoOutputSlot(SimpleContainer inventory) {
+        return inventory.getItem(2).getMaxStackSize() > inventory.getItem(2).getCount();
     }
 }

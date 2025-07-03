@@ -3,6 +3,7 @@ package com.schrottii.easydyes;
 import com.schrottii.easydyes.blocks.entity.ModBlockEntities;
 import com.schrottii.easydyes.items.ModItems;
 import com.schrottii.easydyes.blocks.ModBlocks;
+import com.schrottii.easydyes.recipe.ModRecipes;
 import com.schrottii.easydyes.screen.DyeStationScreen;
 import com.mojang.logging.LogUtils;
 import com.schrottii.easydyes.screen.ModMenuTypes;
@@ -33,6 +34,8 @@ public class EasyDyes
 
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
 
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::clientSetup);
