@@ -28,7 +28,11 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> DYE_STATION = registerBlock("dye_station",
-            () -> new DyeStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+            () -> new DyeStationBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).noOcclusion()));
+
+    public static final RegistryObject<Block> LUCKY_COLOR_BLOCK = registerBlock("lucky_color_block",
+            () -> new Block(Block.Properties.of(Material.STONE).strength(1f, 1200f)));
+
 
 
 

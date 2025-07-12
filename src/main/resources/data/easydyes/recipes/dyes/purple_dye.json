@@ -1,0 +1,15 @@
+{
+  "type": "easydyes:dye_stationing",
+  "ingredients": [
+    {
+      "item": "easydyes:mixed_dye"
+    },
+    {
+      "item": "minecraft:purple_dye"
+    }
+  ],
+  "output": {
+    "item": "minecraft:purple_dye",
+    "count": 2
+  }
+}

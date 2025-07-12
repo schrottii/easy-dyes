@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#forge:is_plains",
+  "features": "easydyes:lucky_color_block",
+  "step": "vegetal_decoration"
+}

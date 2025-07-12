@@ -1,7 +1,8 @@
 {
-  "itemGroup.easydyes": "easydyes Content",
+  "itemGroup.easydyes": "Easy Dyes Content",
 
-  "item.easydyes.normalitem": "Item",
+  "item.easydyes.mixed_dye": "Mixed Dye",
 
-  "block.easydyes.dye_station": "Dye Station"
+  "block.easydyes.dye_station": "Dye Station",
+  "block.easydyes.lucky_color_block": "Lucky Color Block"
 }

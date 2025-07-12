@@ -44,7 +44,7 @@ public class DyeStationBlockEntity extends BlockEntity implements MenuProvider {
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
     private int progress = 0;
-    private int maxProgress = 72;
+    private int maxProgress = 5;
 
     public DyeStationBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(ModBlockEntities.DYE_STATION_BLOCK_ENTITY.get(), pWorldPosition, pBlockState);
@@ -147,8 +147,10 @@ public class DyeStationBlockEntity extends BlockEntity implements MenuProvider {
         if(match.isPresent()) {
             entity.itemHandler.extractItem(0,1, false);
             entity.itemHandler.extractItem(1,1, false);
-            entity.itemHandler.setStackInSlot(2, new ItemStack(match.get().getResultItem().getItem(),
-                    entity.itemHandler.getStackInSlot(2).getCount() + 1));
+
+            ItemStack result = match.get().getResultItem().copy();
+            result.grow(entity.itemHandler.getStackInSlot(2).getCount());
+            entity.itemHandler.setStackInSlot(2, result);
 
             entity.resetProgress();
         }

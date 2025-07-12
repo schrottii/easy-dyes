@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "easydyes:normalblock"
+          "name": "easydyes:dye_station"
         }
       ]
     }

@@ -2,13 +2,14 @@
   "type": "easydyes:dye_stationing",
   "ingredients": [
     {
-      "item": "minecraft:white_dye"
+      "tag": "forge:dyes"
     },
     {
-      "item": "minecraft:black_dye"
+      "tag": "forge:dyes"
     }
   ],
   "output": {
-    "item": "minecraft:red_dye"
+    "item": "easydyes:mixed_dye",
+    "count": 2
   }
 }

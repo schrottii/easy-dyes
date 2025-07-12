@@ -28,7 +28,8 @@ public class DyeStationRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public boolean matches(SimpleContainer pContainer, Level pLevel) {
-        return recipeItems.get(0).test(pContainer.getItem(1));
+        return recipeItems.get(0).test(pContainer.getItem(0))
+        && recipeItems.get(1).test(pContainer.getItem(1));
     }
 
     @Override

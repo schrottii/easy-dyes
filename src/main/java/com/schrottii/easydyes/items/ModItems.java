@@ -15,7 +15,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, EasyDyes.MODID);
 
-    public static final RegistryObject<Item> NORMALITEM = ITEMS.register("normalitem",
+    public static final RegistryObject<Item> MIXED_DYE = ITEMS.register("mixed_dye",
             () -> new Item(new Item.Properties().tab(ModCreativeTab.EASYDYES)));
 
     @SubscribeEvent

@@ -11,8 +11,8 @@ public class ModCreativeTab extends CreativeModeTab {
 
     @Override
     public ItemStack makeIcon() {
-        return new ItemStack(ModItems.NORMALITEM.get());
+        return new ItemStack(ModItems.MIXED_DYE.get());
     }
 
-    public static final ModCreativeTab EASYDYES = new ModCreativeTab(CreativeModeTab.TABS.length, "Easy Dyes");
+    public static final ModCreativeTab EASYDYES = new ModCreativeTab(CreativeModeTab.TABS.length, "easydyes");
 }

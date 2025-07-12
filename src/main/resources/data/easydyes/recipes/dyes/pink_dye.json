@@ -1,0 +1,15 @@
+{
+  "type": "easydyes:dye_stationing",
+  "ingredients": [
+    {
+      "item": "easydyes:mixed_dye"
+    },
+    {
+      "item": "minecraft:pink_dye"
+    }
+  ],
+  "output": {
+    "item": "minecraft:pink_dye",
+    "count": 2
+  }
+}
