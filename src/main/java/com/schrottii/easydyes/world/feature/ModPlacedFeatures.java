@@ -9,6 +9,6 @@ import net.minecraft.world.level.levelgen.placement.RarityFilter;
 
 public class ModPlacedFeatures {
     public static final Holder<PlacedFeature> LUCKY_COLOR_BLOCK_PLACED = PlacementUtils.register("lucky_color_block",
-            ModConfiguredFeatures.LUCKY_COLOR_BLOCK, RarityFilter.onAverageOnceEvery(32),
+            ModConfiguredFeatures.LUCKY_COLOR_BLOCK, RarityFilter.onAverageOnceEvery(64),
             InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, BiomeFilter.biome());
 }

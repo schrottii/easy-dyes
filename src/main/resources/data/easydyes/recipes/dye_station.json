@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " F ",
+    "FXF",
+    " F "
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:crafting_table"
+    },
+    "F": {
+      "tag": "forge:dyes"
+    }
+  },
+  "result": {
+    "item": "easydyes:dye_station",
+    "count": 1
+  }
+}
