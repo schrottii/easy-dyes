@@ -1,0 +1,12 @@
+{
+  "type": "easydyes:bleaching",
+  "ingredients": [
+    {
+      "tag": "forge:dyes"
+    }
+  ],
+  "output": {
+    "item": "minecraft:white_dye",
+    "count": 1
+  }
+}

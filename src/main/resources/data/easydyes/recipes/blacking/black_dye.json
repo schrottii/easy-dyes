@@ -1,0 +1,12 @@
+{
+  "type": "easydyes:blacking",
+  "ingredients": [
+    {
+      "tag": "forge:dyes"
+    }
+  ],
+  "output": {
+    "item": "minecraft:black_dye",
+    "count": 1
+  }
+}

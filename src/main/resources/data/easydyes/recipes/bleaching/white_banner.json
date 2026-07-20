@@ -1,0 +1,12 @@
+{
+  "type": "easydyes:bleaching",
+  "ingredients": [
+    {
+      "tag": "minecraft:banners"
+    }
+  ],
+  "output": {
+    "item": "minecraft:white_banner",
+    "count": 1
+  }
+}

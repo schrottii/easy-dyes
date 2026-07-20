@@ -1,0 +1,12 @@
+{
+  "type": "easydyes:bleaching",
+  "ingredients": [
+    {
+      "item": "minecraft:red_tulip"
+    }
+  ],
+  "output": {
+    "item": "minecraft:white_tulip",
+    "count": 1
+  }
+}

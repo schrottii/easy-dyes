@@ -13,6 +13,12 @@ public class ModRecipes {
 
     public static final RegistryObject<RecipeSerializer<DyeStationRecipe>> DYE_STATIONING_SERIALIZER =
             SERIALIZERS.register("dye_stationing", () -> DyeStationRecipe.Serializer.INSTANCE);
+    public static final RegistryObject<RecipeSerializer<BleachingMachineRecipe>> BLEACHING_SERIALIZER =
+            SERIALIZERS.register("bleaching", () -> BleachingMachineRecipe.Serializer.INSTANCE);
+    public static final RegistryObject<RecipeSerializer<BlackingMachineRecipe>> BLACKING_SERIALIZER =
+            SERIALIZERS.register("blacking", () -> BlackingMachineRecipe.Serializer.INSTANCE);
+    public static final RegistryObject<RecipeSerializer<DyeRemovalMachineRecipe>> DYE_REMOVAL_SERIALIZER =
+            SERIALIZERS.register("dye_removal", () -> DyeRemovalMachineRecipe.Serializer.INSTANCE);
 
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "easydyes:block/sea_holly"
+  },
+  "render-type": "cutout"
+}

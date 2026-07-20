@@ -1,0 +1,12 @@
+{
+  "type": "easydyes:dye_removal",
+  "ingredients": [
+    {
+      "tag": "minecraft:terracotta"
+    }
+  ],
+  "output": {
+    "item": "minecraft:terracotta",
+    "count": 1
+  }
+}

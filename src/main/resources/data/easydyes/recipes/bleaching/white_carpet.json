@@ -1,0 +1,12 @@
+{
+  "type": "easydyes:bleaching",
+  "ingredients": [
+    {
+      "tag": "easydyes:carpets"
+    }
+  ],
+  "output": {
+    "item": "minecraft:white_carpet",
+    "count": 1
+  }
+}

@@ -1,4 +1,44 @@
 -----------------------------------------
-v1.0   2024-00-00
+v1.0   2025-07-15
 
 == Release ==
+- 2 blocks
+- 1 item
+- 2 recipes
+
+
+
+-----------------------------------------
+v1.1   2026-03-23
+
+== v1.1: Dye Manipulation Update ==
+-> Blocks:
+- Added 6 new blocks (8 total)
+- 3 Workstations, see below
+- 3 Flowers, see below
+
+-> Workstations:
+- Bleaching Machine, crafted, turns dyed items into their white version, 200 ticks/item
+- Blacking Machine, crafted, turns dyed items into their black version, 200 ticks/item
+- Dye Removal Machine, crafted, turns certain dyed items into their colorless version (such as Terracotta), 100 ticks/item
+
+-> Flowers:
+- Added Sea Holly, found near Beaches and Rivers, common, used for Dye
+- Added Hellebore, found in Forests, used for Dye
+- Added Black Rampion, found in Forests, used for Dye
+
+-> Recipes:
+- 39 new recipes (41 total)
+- White Tulip now gets crafted into White Dye instead of Light Gray Dye
+- Blue Dye, Purple Dye from Sea Holly
+- Green Dye, Lime Dye from Hellebore
+- Black Dye, Brown Dye from Black Rampion
+- Bleaching Machine, Blacking Machine, Dye Removal Machine
+- Bleaching: Banners, Beds, Candles, Carpets, Concrete, Concrete Powder, Dyes, Stained Glass, Stained Glass Panes, Terracotta, Wool
+- Bleaching: White Tulip from Orange Tulip, Pink Tulip, Red Tulip
+- Blacking: Banners, Beds, Candles, Carpets, Concrete, Concrete Powder, Dyes, Stained Glass, Stained Glass Panes, Terracotta, Wool
+- Dye Removal: Candles, Glass, Glass Panes, Terracotta
+
+-> Other:
+- Changed mod display name from easydyes to Easy Dyes
+- Dye Station: added dye silhouettes to GUI

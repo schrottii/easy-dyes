@@ -17,6 +17,15 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<DyeStationMenu>> DYE_STATION_MENU =
             registerMenuType(DyeStationMenu::new, "dye_station_menu");
 
+    public static final RegistryObject<MenuType<BleachingMachineMenu>> BLEACHING_MACHINE_MENU =
+            registerMenuType(BleachingMachineMenu::new, "bleaching_machine_menu");
+
+    public static final RegistryObject<MenuType<BlackingMachineMenu>> BLACKING_MACHINE_MENU =
+            registerMenuType(BlackingMachineMenu::new, "blacking_machine_menu");
+
+    public static final RegistryObject<MenuType<DyeRemovalMachineMenu>> DYE_REMOVAL_MACHINE_MENU =
+            registerMenuType(DyeRemovalMachineMenu::new, "dye_removal_machine_menu");
+
 
 
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory,

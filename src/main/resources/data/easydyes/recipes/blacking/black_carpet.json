@@ -1,0 +1,12 @@
+{
+  "type": "easydyes:blacking",
+  "ingredients": [
+    {
+      "tag": "easydyes:carpets"
+    }
+  ],
+  "output": {
+    "item": "minecraft:black_carpet",
+    "count": 1
+  }
+}

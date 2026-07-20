@@ -1,0 +1,12 @@
+{
+  "type": "easydyes:blacking",
+  "ingredients": [
+    {
+      "tag": "easydyes:concrete_powder"
+    }
+  ],
+  "output": {
+    "item": "minecraft:black_concrete_powder",
+    "count": 1
+  }
+}

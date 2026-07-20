@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "easydyes:block/dye_removal_machine_on_top",
+    "front": "easydyes:block/dye_removal_machine_on_front",
+    "side": "minecraft:block/furnace_side"
+  }
+}

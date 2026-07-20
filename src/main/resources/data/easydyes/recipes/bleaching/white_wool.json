@@ -1,0 +1,12 @@
+{
+  "type": "easydyes:bleaching",
+  "ingredients": [
+    {
+      "tag": "minecraft:wool"
+    }
+  ],
+  "output": {
+    "item": "minecraft:white_wool",
+    "count": 1
+  }
+}

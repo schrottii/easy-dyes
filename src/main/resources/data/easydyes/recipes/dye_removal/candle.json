@@ -1,0 +1,12 @@
+{
+  "type": "easydyes:dye_removal",
+  "ingredients": [
+    {
+      "tag": "minecraft:candles"
+    }
+  ],
+  "output": {
+    "item": "minecraft:candle",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "black_dye",
+  "ingredients": [
+    {
+      "item": "easydyes:black_rampion_flower"
+    }
+  ],
+  "result": {
+    "item": "minecraft:black_dye",
+    "count": 2
+  }
+}

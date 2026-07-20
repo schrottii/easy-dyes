@@ -4,5 +4,12 @@
   "item.easydyes.mixed_dye": "Mixed Dye",
 
   "block.easydyes.dye_station": "Dye Station",
-  "block.easydyes.lucky_color_block": "Lucky Color Block"
+  "block.easydyes.bleaching_machine": "Bleaching Machine",
+  "block.easydyes.blacking_machine": "Blacking Machine",
+  "block.easydyes.dye_removal_machine": "Dye Removal Machine",
+  "block.easydyes.lucky_color_block": "Lucky Color Block",
+
+  "block.easydyes.sea_holly_flower": "Sea Holly",
+  "block.easydyes.hellebore_flower": "Hellebore",
+  "block.easydyes.black_rampion_flower": "Black Rampion"
 }

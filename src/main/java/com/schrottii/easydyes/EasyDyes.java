@@ -4,10 +4,11 @@ import com.schrottii.easydyes.blocks.entity.ModBlockEntities;
 import com.schrottii.easydyes.items.ModItems;
 import com.schrottii.easydyes.blocks.ModBlocks;
 import com.schrottii.easydyes.recipe.ModRecipes;
-import com.schrottii.easydyes.screen.DyeStationScreen;
+import com.schrottii.easydyes.screen.*;
 import com.mojang.logging.LogUtils;
-import com.schrottii.easydyes.screen.ModMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -46,6 +47,13 @@ public class EasyDyes
 
     private void clientSetup (final FMLClientSetupEvent event) {
         MenuScreens.register(ModMenuTypes.DYE_STATION_MENU.get(), DyeStationScreen::new);
+        MenuScreens.register(ModMenuTypes.BLEACHING_MACHINE_MENU.get(), BleachingMachineScreen::new);
+        MenuScreens.register(ModMenuTypes.BLACKING_MACHINE_MENU.get(), BlackingMachineScreen::new);
+        MenuScreens.register(ModMenuTypes.DYE_REMOVAL_MACHINE_MENU.get(), DyeRemovalMachineScreen::new);
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.SEA_HOLLY_FLOWER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.HELLEBORE_FLOWER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLACK_RAMPION_FLOWER.get(), RenderType.cutout());
     }
 
     private void setup(final FMLCommonSetupEvent event)

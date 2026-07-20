@@ -2,8 +2,9 @@ package com.schrottii.easydyes.blocks;
 
 import com.schrottii.easydyes.EasyDyes;
 import com.schrottii.easydyes.ModCreativeTab;
-import com.schrottii.easydyes.blocks.custom.DyeStationBlock;
+import com.schrottii.easydyes.blocks.custom.*;
 import com.schrottii.easydyes.items.ModItems;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -30,9 +31,26 @@ public class ModBlocks {
     public static final RegistryObject<Block> DYE_STATION = registerBlock("dye_station",
             () -> new DyeStationBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).noOcclusion()));
 
+    public static final RegistryObject<Block> BLEACHING_MACHINE = registerBlock("bleaching_machine",
+            () -> new BleachingMachineBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).noOcclusion()));
+
+    public static final RegistryObject<Block> BLACKING_MACHINE = registerBlock("blacking_machine",
+            () -> new BlackingMachineBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).noOcclusion()));
+
+    public static final RegistryObject<Block> DYE_REMOVAL_MACHINE = registerBlock("dye_removal_machine",
+            () -> new DyeRemovalMachineBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).noOcclusion()));
+
     public static final RegistryObject<Block> LUCKY_COLOR_BLOCK = registerBlock("lucky_color_block",
             () -> new Block(Block.Properties.of(Material.STONE).strength(1f, 1200f)));
 
+    public static final RegistryObject<Block> SEA_HOLLY_FLOWER = registerBlock("sea_holly_flower",
+            () -> new SeaHollyBlock(MobEffects.WATER_BREATHING, 120,  Block.Properties.of(Material.PLANT).strength(0f, 1f).noCollission()));
+
+    public static final RegistryObject<Block> HELLEBORE_FLOWER = registerBlock("hellebore_flower",
+            () -> new FlowerBlock(MobEffects.CONFUSION, 30,  Block.Properties.of(Material.PLANT).strength(0f, 1f).noCollission()));
+
+    public static final RegistryObject<Block> BLACK_RAMPION_FLOWER = registerBlock("black_rampion_flower",
+            () -> new FlowerBlock(MobEffects.BLINDNESS, 30,  Block.Properties.of(Material.PLANT).strength(0f, 1f).noCollission()));
 
 
 

@@ -1,0 +1,12 @@
+{
+  "type": "easydyes:blacking",
+  "ingredients": [
+    {
+      "tag": "forge:glass_panes"
+    }
+  ],
+  "output": {
+    "item": "minecraft:black_stained_glass_pane",
+    "count": 1
+  }
+}

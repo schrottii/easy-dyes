@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "green_dye",
+  "ingredients": [
+    {
+      "item": "easydyes:hellebore_flower"
+    }
+  ],
+  "result": {
+    "item": "minecraft:green_dye",
+    "count": 2
+  }
+}

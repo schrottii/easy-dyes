@@ -1,0 +1,12 @@
+{
+  "type": "easydyes:bleaching",
+  "ingredients": [
+    {
+      "tag": "easydyes:concrete"
+    }
+  ],
+  "output": {
+    "item": "minecraft:white_concrete",
+    "count": 1
+  }
+}

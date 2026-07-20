@@ -1,0 +1,12 @@
+{
+  "type": "easydyes:bleaching",
+  "ingredients": [
+    {
+      "tag": "minecraft:candles"
+    }
+  ],
+  "output": {
+    "item": "minecraft:white_candle",
+    "count": 1
+  }
+}

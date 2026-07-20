@@ -1,0 +1,12 @@
+{
+  "type": "easydyes:blacking",
+  "ingredients": [
+    {
+      "tag": "minecraft:wool"
+    }
+  ],
+  "output": {
+    "item": "minecraft:black_wool",
+    "count": 1
+  }
+}

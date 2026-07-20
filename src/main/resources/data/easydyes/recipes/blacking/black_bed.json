@@ -1,0 +1,12 @@
+{
+  "type": "easydyes:blacking",
+  "ingredients": [
+    {
+      "tag": "minecraft:beds"
+    }
+  ],
+  "output": {
+    "item": "minecraft:black_bed",
+    "count": 1
+  }
+}

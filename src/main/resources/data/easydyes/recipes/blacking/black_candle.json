@@ -1,0 +1,12 @@
+{
+  "type": "easydyes:blacking",
+  "ingredients": [
+    {
+      "tag": "minecraft:candles"
+    }
+  ],
+  "output": {
+    "item": "minecraft:black_candle",
+    "count": 1
+  }
+}

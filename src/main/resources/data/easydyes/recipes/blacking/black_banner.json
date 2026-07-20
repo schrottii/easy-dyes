@@ -1,0 +1,12 @@
+{
+  "type": "easydyes:blacking",
+  "ingredients": [
+    {
+      "tag": "minecraft:banners"
+    }
+  ],
+  "output": {
+    "item": "minecraft:black_banner",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "easydyes:blacking",
+  "ingredients": [
+    {
+      "tag": "minecraft:terracotta"
+    }
+  ],
+  "output": {
+    "item": "minecraft:black_terracotta",
+    "count": 1
+  }
+}

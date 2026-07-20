@@ -1,0 +1,12 @@
+{
+  "type": "easydyes:bleaching",
+  "ingredients": [
+    {
+      "tag": "forge:glass"
+    }
+  ],
+  "output": {
+    "item": "minecraft:white_stained_glass",
+    "count": 1
+  }
+}

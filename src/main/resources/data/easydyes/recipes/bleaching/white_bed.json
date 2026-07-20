@@ -1,0 +1,12 @@
+{
+  "type": "easydyes:bleaching",
+  "ingredients": [
+    {
+      "tag": "minecraft:beds"
+    }
+  ],
+  "output": {
+    "item": "minecraft:white_bed",
+    "count": 1
+  }
+}

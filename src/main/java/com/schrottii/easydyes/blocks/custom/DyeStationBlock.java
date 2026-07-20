@@ -86,7 +86,7 @@ public class DyeStationBlock extends BaseEntityBlock {
             if(entity instanceof DyeStationBlockEntity) {
                 NetworkHooks.openGui(((ServerPlayer)pPlayer), (DyeStationBlockEntity)entity, pPos);
             } else {
-                throw new IllegalStateException("Our Container provider is missing!");
+                throw new IllegalStateException("Container provider is missing!");
             }
         }
 

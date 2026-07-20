@@ -1,0 +1,12 @@
+{
+  "type": "easydyes:bleaching",
+  "ingredients": [
+    {
+      "tag": "minecraft:terracotta"
+    }
+  ],
+  "output": {
+    "item": "minecraft:white_terracotta",
+    "count": 1
+  }
+}
